@@ -11,7 +11,7 @@ metadata:
   name: {{ template "f5-bigip-ctlr.fullname" . }}
   labels:
     app: {{ template "f5-bigip-ctlr.name" . }}
-    chart: {{ template "f5-bigip-ctlr.chart" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
